@@ -3,7 +3,6 @@ const { dots2 } = require("cli-spinners");
 const chalk = require("chalk");
 const { promisify } = require("util");
 const { readdir } = require("fs");
-const path = require("path");
 const readDirAsync = promisify(readdir);
 const { createFinder, createFindScript } = require("../helpers");
 const { klarnaFolder, translationLanguagesFolder } = require("../constants");
@@ -14,7 +13,7 @@ const createSpinnerText = (text) => ({
   success: `${chalk.bold(text)}: ${chalk.green("done")}`,
   fail: `${chalk.bold(text)}:  ${chalk.green("failed")}`,
 });
-module.exports = async (args) => {
+module.exports = async (args, configStore) => {
   let spinnerText = createSpinnerText("Locating Klarna-app project");
   const spinner = ora({
     text: spinnerText.load,
@@ -50,6 +49,8 @@ module.exports = async (args) => {
   }
 
   spinner.succeed(spinnerText.success);
+
+  configStore.set("translationsPath", translationsPath);
 
   const files = await readDirAsync(translationsPath, "utf8");
   files.forEach((lang) => console.log(lang));

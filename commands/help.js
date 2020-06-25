@@ -2,12 +2,11 @@ const menus = {
   main: `
       transiflex [command] <options>
   
-      cmp ................ compare difference in keys of two translation files
-      merge .............. merge missing keys from one file to another
-      version ............ show package version
-      help ............... show help menu for a command`,
-
-  cmp: `
+      compare, -c ................ compare difference in keys of two translation files
+      merge, -m .............. merge missing keys from one file to another
+      version, -v ............ show package version
+      help, -h ............... show help menu for a command`,
+  compare: `
       transiflex cmp <file1> <file2> <options>
   
       --option, ..... some option description`,

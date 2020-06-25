@@ -21,14 +21,16 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
+    "all-object-keys": "^2.1.1",
     "chalk": "^4.1.0",
     "cli-spinners": "^2.3.0",
+    "configstore": "^5.0.1",
     "esm": "^3.2.25",
-    "findit": "^2.0.0",
     "inquirer": "^7.2.0",
+    "jessy": "^3.0.0",
     "minimist": "^1.2.5",
+    "nessy": "^3.0.0",
     "ora": "^4.0.4",
-    "ramda": "^0.27.0",
-    "shelljs": "^0.8.4"
+    "ramda": "^0.27.0"
   }
 }

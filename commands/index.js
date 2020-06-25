@@ -4,4 +4,5 @@ module.exports = {
   list: require("./list"),
   merge: require("./merge"),
   version: require("./version"),
+  config: require("./config"),
 };

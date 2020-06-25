@@ -1,6 +1,5 @@
 const util = require("util");
 const exec = util.promisify(require("child_process").exec);
-const shell = require("shelljs");
 const createFinder = ({ withLogs = false }) => async ({
   findScript = null,
 }) => {
